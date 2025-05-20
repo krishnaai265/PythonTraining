@@ -138,6 +138,28 @@ complex_dict = {
 }
 print(complex_dict["France"]["cities_visited"])
 
+# sorting dictionaries in python
+print("------sorted dict---------")
+word_dict = {
+    "krishna": 3,
+    "abhinav": 1,
+    "bae": 2
+}
+sorted_dict1 = sorted(word_dict.items()) # sorting based on key value
+print(sorted_dict1)
+sorted_dict2 = sorted(word_dict.items(), key=lambda x:x[1], reverse=True)
+print(sorted_dict2)
+
+print("----------sort in nested dict--------")
+word_dict = {
+    "krishna": [3,2,1],
+    "abhinav": [5, 5, 8],
+    "bae": [4,5,6]
+}
+
+# sort dictionary based on second and third item of list in descending order
+sorted_dict2 = sorted(word_dict.items(), key=lambda x:(x[1][1], x[1][2]), reverse=True)
+print(sorted_dict2)
 
 # List comprehension
 numbers = [1,2,3,4,5]
